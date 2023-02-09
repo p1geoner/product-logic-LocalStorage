@@ -1,0 +1,234 @@
+.footer_container {
+  width: 1140px;
+  height: 1915px;
+}
+.footer__tabs-body-item p,
+.footer__tabs-body-item-container_1 p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0;
+  margin-top: 16px;
+  /* Dark Grey */
+
+  color: #8e8e93;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.footer__tabs-body-item p:hover,
+.footer__tabs-body-item-container_1 p:hover {
+  color: white;
+}
+.footer__tabs-header-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 13px;
+
+  /* White */
+
+  color: #ffffff;
+}
+footer {
+  background: #1e2022;
+}
+.footer__tabs-header {
+  display: flex;
+  gap: 160px;
+  width: 809px;
+}
+.footer__tabs-body {
+  display: block;
+}
+.footer__tabs-header-item {
+  cursor: pointer;
+  transition: 0.4s all;
+}
+
+.footer__tabs-body {
+  display: flex;
+  gap: 60px;
+}
+.footer__tabs-body-item.flex {
+  display: flex;
+  gap: 60px;
+}
+
+.footer__container {
+  max-width: 1140px;
+  margin: 0 auto;
+  border-bottom: 1px solid #404040;
+  padding-bottom: 30px;
+}
+footer {
+  padding: 30px 20px;
+  width: 100%;
+}
+.footer__container-2 {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__container-2-text {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 30px;
+}
+.footer__container-2-text a,
+.footer__container-2-copy p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+
+  /* Dark Grey */
+
+  color: #8e8e93;
+  margin-top: 30px;
+  margin-bottom: 0;
+  transition: all 0.4s ease-in-out;
+}
+.footer__container-2-text a:hover,
+.footer__container-2-copy p:hover {
+  color: white;
+}
+.footer__container-social-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 13px;
+
+  /* White */
+
+  color: #ffffff;
+}
+.footer__container-social-btns {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+.footer__container-social-btn {
+  cursor: pointer;
+}
+.img-width-22px {
+  width: 22px;
+  height: 22px;
+  margin-bottom: 2px;
+}
+.footer__container-social-btn {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #404040;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+.footer__container-social-btn:hover {
+  border-color: #e8e8e9;
+  background-color: #22282f;
+}
+.footer__container-flex {
+  display: flex;
+}
+
+/* akkordeon */
+.footer__tab {
+  display: none;
+}
+/* akkordeon */
+@media (max-width: 1200px) {
+  .footer__tabs-body,
+  .footer__tabs-body-item.flex {
+    gap: 1%;
+  }
+  .footer__tabs-header {
+    gap: 15%;
+  }
+  .footer__tabs {
+    width: 600px;
+  }
+  .footer__container-flex {
+    justify-content: space-between;
+  }
+  .footer__container-2 {
+    gap: 1%;
+  }
+}
+footer {
+  margin-top: 100px;
+}
+@media (max-width: 1000px) {
+  /* footer */
+  .footer__tabs {
+    display: none;
+  }
+  .footer__tab {
+    display: flex;
+    color: #ffffff;
+  }
+  .footer__tabs_container {
+    position: inherit;
+    width: 100%;
+  }
+  .footer__tabs-header {
+    padding: 25px 0;
+    position: inherit;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .footer__container-social-text {
+    padding-top: 25px;
+    margin: 0;
+  }
+  .footer__tabs-header,
+  .footer__container-social-text {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    border-top: 1px solid #404040;
+  }
+  .footer__tabs-body {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* Dark Grey */
+
+    color: #8e8e93;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+  }
+  .footer__container-flex {
+    flex-direction: column;
+  }
+
+  .footer__container-2-text {
+    gap: 2%;
+  }
+  .logo-div {
+    padding-bottom: 30px;
+  }
+
+  /* /footer */
+}

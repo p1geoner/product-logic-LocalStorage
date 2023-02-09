@@ -5,18 +5,458 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Смартфоны</title>
+  <meta name="description" content="На данной странице, вы можете выбрать лучший сматрфон для себя и всей семьи." />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <div id="header"></div>
-  <div id="products"></div>
-  <script src="root.js"></script>
-  <script src="localstorage.js"></script>
-  <script src="catalog.js"></script>
-  <script src="header.js"></script>
-  <script src="products.js"></script>
+  <header class="header" id="header">
+
+  </header>
+
+  <div class="way">
+    <a class="way_glav" href="">Главная</a><span> / </span>
+    <a class="way_catalog" href=""> Каталог</a><span> / </span>
+    <a class="way_smartphone" href=""> Смартфоны</a>
+  </div>
+
+  <div class="category_name">
+    <h1>Смартфоны <span href="#">367 товаров</span></h1>
+  </div>
+  <div class="content">
+
+
+    <div class="sortirovka_tovarov">
+      <div class="sortirovka_spisok">
+        <button><img src="/img/dropdown.png" alt=""></button>
+        <select id="selectID">
+          <option value=”GR”>Сначала популярные</option>
+          <option value=”YE”>Сначала дешёвые</option>
+          <option value=”BL”>Часто обозреваемые</option>
+        </select>
+      </div>
+      <div class="vid_sort">
+        <button class="poloski__sort__btn"><img src="/img/poloski_sort.png" alt=""></button>
+        <button class="cubiki__sort__btn"><img src="/img/cubiki_sort.png" alt=""></button>
+      </div>
+    </div>
+
+    <div class="filtres">
+
+      <div class="search_category">
+
+        <input type="text" name="text" class="pole_search_cat" placeholder="Поиск по категории">
+        <button class="search_category__btn" type="submit"><img class="lupa__search__category" src="/img/search.png"
+            alt=""></button>
+
+      </div>
+
+      <div class="dropdown one">
+        <div class="dropdown__header">
+          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          Наличие в магазинах
+        </div>
+
+        <div class="dropdown__body">
+
+          <div class="vibor__magazina__filters">
+            <select id="vibor__magazina__select">
+              <option value=”popnlar”>В любом из 23 магазинов</option>
+              <option value=”low”>1 магазин</option>
+              <option value=”high”>2 магазин</option>
+            </select>
+          </div>
+          <span class="checkbox_txt"><input type="checkbox" checked> В наличии</span>
+          <span class="checkbox_txt"><input type="checkbox"> Под заказ: сегодня</span>
+          <span class="checkbox_txt"><input type="checkbox"> Под заказ: до 3 дней</span>
+          <span class="checkbox_txt"><input type="checkbox"> Под заказ: более 3 дней</span>
+          <span class="checkbox_txt"><input type="checkbox"> Отсутствующие в продаже</span>
+
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropdown__header">
+          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          Цена
+        </div>
+
+        <div class="dropdown__body flex ">
+
+          <div class="ot__do">
+            <input class="cena_inp" type="text" placeholder="От">
+            <span class="tire">-</span>
+            <input class="cena_inp" type="text" placeholder="До">
+          </div>
+
+          <div class="vibor__ceni">
+            <span class="checkbox_txt"><input type="checkbox"> Менее 4 000 ₽</span>
+            <span class="checkbox_txt"><input type="checkbox"> От 4 001 до 10 000 ₽</span>
+            <span class="checkbox_txt"><input type="checkbox"> От 10 001 до 18 000 ₽</span>
+            <span class="checkbox_txt"><input type="checkbox"> От 18 001 до 27 000 ₽</span>
+            <span class="checkbox_txt"><input type="checkbox"> От 27 001 до 40 000 ₽</span>
+            <span class="checkbox_txt"><input type="checkbox"> Более 40 000 ₽</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropdown__header">
+          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          Производитель
+        </div>
+
+        <div class="dropdown__body">
+          <div class="search_creator">
+            <input type="text" class="search_creator_txt" placeholder="Поиск">
+            <button class="search_creator_btn"><img src="/img/search.png" alt=""></button>
+          </div>
+
+          <div class="vibor__creator">
+            <span class="checkbox_txt"><input type="checkbox"> Samsung</span>
+            <span class="checkbox_txt"><input type="checkbox"> LG</span>
+            <span class="checkbox_txt"><input type="checkbox"> Xiaomi</span>
+            <span class="checkbox_txt"><input type="checkbox"> TCL</span>
+            <span class="checkbox_txt"><input type="checkbox"> Philips</span>
+            <span class="checkbox_txt"><input type="checkbox"> Sony</span>
+            <span class="checkbox_txt"><input type="checkbox"> BBQ</span>
+            <span id="dots"></span>
+            <span id="more">
+              <span class="checkbox_txt one"><input type="checkbox"> Samsung</span>
+              <span class="checkbox_txt"><input type="checkbox"> LG</span>
+              <span class="checkbox_txt"><input type="checkbox"> Xiaomi</span>
+              <span class="checkbox_txt"><input type="checkbox"> TCL</span>
+              <span class="checkbox_txt"><input type="checkbox"> Philips</span>
+              <span class="checkbox_txt"><input type="checkbox"> Sony</span>
+              <span class="checkbox_txt"><input type="checkbox"> BBQ</span>
+            </span>
+          </div>
+          <button onclick="readmore()" id="readmore_btn">Показать ещё</button>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropdown__header">
+          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          Год релиза
+        </div>
+        <div class="dropdown__body">
+
+          <span class="checkbox_txt"><input type="checkbox" checked> 2020</span>
+          <span class="checkbox_txt"><input type="checkbox"> 2021</span>
+          <span class="checkbox_txt"><input type="checkbox"> 2022</span>
+          <span class="checkbox_txt"><input type="checkbox"> 2023</span>
+
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropdown__header">
+          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          Объем встроенной памяти
+        </div>
+        <div class="dropdown__body">
+
+          <span class="checkbox_txt"><input type="checkbox" checked> 2гб</span>
+          <span class="checkbox_txt"><input type="checkbox"> 3гб</span>
+          <span class="checkbox_txt"><input type="checkbox"> 4гб</span>
+          <span class="checkbox_txt"><input type="checkbox"> 6гб</span>
+
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropdown__header">
+          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          NFC
+        </div>
+        <div class="dropdown__body">
+
+          <span class="checkbox_txt"><input type="checkbox" checked> Да</span>
+          <span class="checkbox_txt"><input type="checkbox"> Нет</span>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropdown__header">
+          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          Емкость аккумулятора
+        </div>
+        <div class="dropdown__body">
+
+          <span class="checkbox_txt"><input type="checkbox" checked> 3100mAh</span>
+          <span class="checkbox_txt"><input type="checkbox"> 4100mAh</span>
+          <span class="checkbox_txt"><input type="checkbox"> 5000mAh</span>
+          <span class="checkbox_txt"><input type="checkbox"> 5300mAh</span>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropdown__header">
+          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          Операционная система
+        </div>
+        <div class="dropdown__body">
+
+          <span class="checkbox_txt"><input type="checkbox" checked> IOS</span>
+          <span class="checkbox_txt"><input type="checkbox"> Android</span>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropdown__header">
+          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          Диагональ экрана
+        </div>
+        <div class="dropdown__body">
+
+          <span class="checkbox_txt"><input type="checkbox" checked> 5,1"</span>
+          <span class="checkbox_txt"><input type="checkbox"> 6,1"</span>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropdown__header">
+          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          Модель
+        </div>
+        <div class="dropdown__body">
+
+          <span class="checkbox_txt"><input type="checkbox" checked> Какой-то андроид</span>
+          <span class="checkbox_txt"><input type="checkbox"> Какой-то айфон</span>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropdown__header">
+          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          Поддержка сетей 5G
+        </div>
+        <div class="dropdown__body">
+
+          <span class="checkbox_txt"><input type="checkbox" checked> Да</span>
+          <span class="checkbox_txt"><input type="checkbox"> Нет</span>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropdown__header">
+          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          Количество ядер
+        </div>
+        <div class="dropdown__body">
+
+          <span class="checkbox_txt"><input type="checkbox" checked> 2</span>
+          <span class="checkbox_txt"><input type="checkbox"> 4</span>
+        </div>
+      </div>
+
+      <button class="primenit">Применить</button>
+      <button class="reset__filter">Сбросить фильтры</button>
+    </div>
+    <div class="content__tovar">
+      <div class="products-container" id="products">
+
+      </div>
+      <button id="more_tovar_btn" onclick="moretovar()">Показать ещё</button>
+      <div class="num_str">
+        <button><img src="/img/right_str.png" alt=""></button>
+        <span class="num_str_active">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span class="skritie__adaptiv">4</span>
+        <span class="skritie__adaptiv">5</span>
+        <span>...</span>
+        <span>10</span>
+        <button><img src="/img/left_str.png" alt=""></button>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer__container">
+
+      <div class="logo-div">
+        <a href="" class="logo"><img src="img/images/Logo.svg" alt="#" class="logo__img"></a>
+      </div>
+      <div class="footer__container-flex">
+        <div class="footer__tab">
+          <div class="footer__tabs_container">
+            <div class="footer__tabs-header">О Компании <img class="footer__tabs-header-img"
+                src="img/images/strelka-footer.svg" alt="">
+            </div>
+            <div class="footer__tabs-body">
+              <p>Про ELECTRONICS</p>
+              <p>Новости</p>
+              <p>Партнерам</p>
+              <p>Вакансии</p>
+              <p>Политика конфиденциальности</p>
+              <p>Персональные данные</p>
+              <p>Правила продаж</p>
+              <p>Сервисные центры</p>
+            </div>
+            <div class="footer__tabs-header">Покупателям <img class="footer__tabs-header-img"
+                src="img/images/strelka-footer.svg" alt="">
+            </div>
+            <div class="footer__tabs-body">
+              <p>Как оформить заказ</p>
+              <p>Способы оплаты</p>
+              <p>Кредиты</p>
+              <p>Доставка</p>
+              <p>Статус заказа</p>
+              <p>Обмен, возврат, гарантия</p>
+              <p>Проверка статуса ремонта</p>
+              <p>Юридическим лицам</p>
+              <p>Проверка счета</p>
+              <p>Корпоративные отделы</p>
+              <p>Подарочные карты</p>
+              <p>Бонусная программа</p>
+              <p>Помощь </p>
+              <p>Обратная связь</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__tabs">
+          <div class="footer__tabs-header">
+            <div class="footer__tabs-header-item">
+              <p class="footer__tabs-header-text">
+                О Компании
+              </p>
+            </div>
+            <div class="footer__tabs-header-item">
+              <p class="footer__tabs-header-text">
+                Покупателям
+              </p>
+            </div>
+          </div>
+          <div class="footer__tabs-body">
+            <div class="footer__tabs-body-item">
+              <div class="footer__tabs-body-item">
+                <p>Про ELECTRONICS</p>
+                <p>Новости</p>
+                <p>Партнерам</p>
+                <p>Вакансии</p>
+                <p>Политика конфиденциальности</p>
+                <p>Персональные данные</p>
+                <p>Правила продаж</p>
+                <p>Сервисные центры</p>
+              </div>
+            </div>
+            <div class="footer__tabs-body-item flex">
+              <div class="footer__tabs-body-item-container_1">
+                <p>Как оформить заказ</p>
+                <p>Способы оплаты</p>
+                <p>Кредиты</p>
+                <p>Доставка</p>
+                <p>Статус заказа</p>
+                <p>Обмен, возврат, гарантия</p>
+                <p>Проверка статуса ремонта</p>
+              </div>
+              <div class="footer__tabs-body-item-container_2">
+                <p>Юридическим лицам</p>
+                <p>Проверка счета</p>
+                <p>Корпоративные отделы</p>
+                <p>Подарочные карты</p>
+                <p>Бонусная программа</p>
+                <p>Помощь </p>
+                <p>Обратная связь</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="footer__container-social">
+          <div class="footer__container-social-text">Мы в соцсетях</div>
+          <div class="footer__container-social-btns">
+            <div class="footer__container-social-btn"><a href=""><img src="img/images/facebook.svg" alt="#"></a>
+            </div>
+            <div class="footer__container-social-btn"><a href=""><img src="img/images/twitter.svg" alt="#"></a>
+            </div>
+            <div class="footer__container-social-btn"><a href=""><img class="img-width-22px" src="img/images/inst.svg"
+                  alt="#"></a></div>
+            <div class="footer__container-social-btn"><a href=""><img src="img/images/vk.svg" alt="#"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__container-2">
+      <div class="footer__container-2-copy">
+        <p>Copyright 2022</p>
+      </div>
+      <div class="footer__container-2-text">
+        <a href="">Политика конфиденциальности</a><a href="">Публичная оферта</a><a href="">Карта сайта</a>
+      </div>
+    </div>
+
+  </footer>
+  <script>
+    function moretovar() {
+      var dots = document.getElementById("dots_tovar");
+      var moreText = document.getElementById("more_tovar");
+      var btnText = document.getElementById("more_tovar_btn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Показать ещё";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Скрыть";
+        moreText.style.display = "contents";
+      }
+    }
+  </script>
+
+  <script>
+    function readmore() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("readmore_btn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Показать ещё";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Скрыть";
+        moreText.style.display = "flex";
+      }
+    }
+  </script>
+  <script>
+    let current_rotation_1 = 180;
+    document.querySelectorAll('.dropdown__header').forEach((el) => {
+      el.addEventListener('click', () => {
+        let content = el.nextElementSibling;
+        let child = el.lastElementChild;
+        if (content.style.maxHeight == 0 + 'px') {
+          child.style.transform = 'rotate(' + 180 + 'deg)';
+          content.style.maxHeight = content.scrollHeight + 'px';
+          console.log(content);
+        } else {
+          console.log(content);
+          child.style.transform = 'rotate(' + 0 + 'deg)';
+          content.style.maxHeight = 0 + 'px';
+        }
+      })
+    })
+  </script>
+  <script src="js/tabs.js"></script>
+  <script src="js/root.js"></script>
+  <script src="js/localstorage.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/products.js"></script>
+
 </body>
 
 </html>

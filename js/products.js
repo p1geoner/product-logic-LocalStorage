@@ -1,7 +1,7 @@
 class products{
   constructor(){
     this.classNameActive='_active';
-    this.labelAdd='Добавить в корзину';
+    this.labelAdd=`<img src="img/images/basket.svg" alt="">`;
     this.labelRemove='Удалить из корзины';
   }
   
@@ -30,16 +30,29 @@ class products{
           activeText=this.labelRemove
         }
         HtmlCatalog +=`
-          <li class="products-element">
-            <span class="products-element__name" >${name}</span>
-            <img class="products-element__image" src="${img}"/>
-            <span class="products-element__price">
+          
+          <li class="tovar__block">
+          <div class="photo_tovara" style="background-image: url(${img});"></div>
+          <h2 class="tovar_name">${name}</h2>
+          <div class="tovar_otziv">
+            <img src="img/images/Star.svg" alt="">
+            <a href="" class="otziv_cifra">4.8</a>
+            <a href="" class="otziv_kolvo"> / 47 отзывов</a>
+          </div>
+          <div class="cena_tovara">
+            <a class="old_cena">79 999</a>
+            <span class="new_cena">
             ${price.toLocaleString()} RUB
             </span>
-            <button class="products-element__btn${activeClass}" onclick="productsPage.hamdleSetLocationStorage(this,'${id}')">
-              ${activeText}
-            </button>
-          </li>
+          </div>
+          <div class="block_korzina">
+          <button class="add_korzina${activeClass}" onclick="productsPage.hamdleSetLocationStorage(this,'${id}')">
+          ${activeText}
+          </button>
+            <button class="like_tovar"><img src="/img/like_tovar.png" alt=""></button>
+            <button class="sravnen_tovara"><img src="/img/sravnen_tovar.png" alt=""></button>
+          </div>
+        </li>
         `;
       })
       const Html =`

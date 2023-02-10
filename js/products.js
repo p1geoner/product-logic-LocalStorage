@@ -20,7 +20,7 @@ class products{
     render(){
       const productsStore = localStorage.getProducts();
       let HtmlCatalog ='';
-      CATALOG.forEach(({id, name, price, img})=>{
+      CATALOG.forEach(({id, name, price, img, reviews, grade})=>{
         let activeClass='';
         let activeText= '';
         if(productsStore.indexOf(id)=== -1){
@@ -31,28 +31,27 @@ class products{
         }
         HtmlCatalog +=`
           
-          <li class="tovar__block">
-          <div class="photo_tovara" style="background-image: url(${img});"></div>
-          <h2 class="tovar_name">${name}</h2>
-          <div class="tovar_otziv">
-            <img src="img/images/Star.svg" alt="">
-            <a href="" class="otziv_cifra">4.8</a>
-            <a href="" class="otziv_kolvo"> / 47 отзывов</a>
+        <li class="product__item">
+        <div class="item__image" style="background-image: url(${img});"></div>
+        <div class="container_flex-gap">
+          <a href="#">${name}</a>
+          <div class="item__star">
+            <div class="star"><img src="img/images/Star.svg" alt="#"></div>
+            <a href="#" class="item__text_red">${grade}</a>
+            <a href="#" class="item__text">/ ${reviews} отзыва</a>
           </div>
-          <div class="cena_tovara">
-            <a class="old_cena">79 999</a>
-            <span class="new_cena">
+          <div class="item__price">
             ${price.toLocaleString()} RUB
-            </span>
           </div>
-          <div class="block_korzina">
-          <button class="add_korzina${activeClass}" onclick="productsPage.hamdleSetLocationStorage(this,'${id}')">
-          ${activeText}
-          </button>
-            <button class="like_tovar"><img src="/img/like_tovar.png" alt=""></button>
-            <button class="sravnen_tovara"><img src="/img/sravnen_tovar.png" alt=""></button>
+        </div>
+        <div class="item-form">
+          <div class="item-form__btn${activeClass}" onclick="productsPage.hamdleSetLocationStorage(this,'${id}')">
+            ${activeText}</div>
+          <div class="item-form__heart"><img src="img/images/heart.svg" alt="#">
           </div>
-        </li>
+          <div class="item-form__stat"><img src="img/images/Compare.svg" alt="#"></div>
+        </div>
+      </li>
         `;
       })
       const Html =`

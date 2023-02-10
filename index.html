@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/products.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -32,41 +33,18 @@
     <h1>Смартфоны <span href="#">367 товаров</span></h1>
   </div>
   <div class="content">
-
-
-    <div class="sortirovka_tovarov">
-      <div class="sortirovka_spisok">
-        <button><img src="/img/dropdown.png" alt=""></button>
-        <select id="selectID">
-          <option value=”GR”>Сначала популярные</option>
-          <option value=”YE”>Сначала дешёвые</option>
-          <option value=”BL”>Часто обозреваемые</option>
-        </select>
-      </div>
-      <div class="vid_sort">
-        <button class="poloski__sort__btn"><img src="/img/poloski_sort.png" alt=""></button>
-        <button class="cubiki__sort__btn"><img src="/img/cubiki_sort.png" alt=""></button>
-      </div>
-    </div>
-
     <div class="filtres">
-
       <div class="search_category">
-
         <input type="text" name="text" class="pole_search_cat" placeholder="Поиск по категории">
-        <button class="search_category__btn" type="submit"><img class="lupa__search__category" src="/img/search.png"
-            alt=""></button>
-
+        <button class="search_category__btn" type="submit"><img class="lupa__search__category"
+            src="img/images/search.svg" alt=""></button>
       </div>
-
       <div class="dropdown one">
         <div class="dropdown__header">
-          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          <img class="dropdown__header-img" src="img/images/dropdown.svg" alt="">
           Наличие в магазинах
         </div>
-
         <div class="dropdown__body">
-
           <div class="vibor__magazina__filters">
             <select id="vibor__magazina__select">
               <option value=”popnlar”>В любом из 23 магазинов</option>
@@ -74,18 +52,37 @@
               <option value=”high”>2 магазин</option>
             </select>
           </div>
-          <span class="checkbox_txt"><input type="checkbox" checked> В наличии</span>
-          <span class="checkbox_txt"><input type="checkbox"> Под заказ: сегодня</span>
-          <span class="checkbox_txt"><input type="checkbox"> Под заказ: до 3 дней</span>
-          <span class="checkbox_txt"><input type="checkbox"> Под заказ: более 3 дней</span>
-          <span class="checkbox_txt"><input type="checkbox"> Отсутствующие в продаже</span>
-
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            В наличии
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            Под заказ: сегодня
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            Под заказ: до 3 дней
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            Под заказ: более 3 дней
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            Отсутствующие в продаже
+          </label>
         </div>
       </div>
 
       <div class="dropdown">
         <div class="dropdown__header">
-          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          <img class="dropdown__header-img" src="img/images/dropdown.svg" alt="">
           Цена
         </div>
 
@@ -93,50 +90,120 @@
 
           <div class="ot__do">
             <input class="cena_inp" type="text" placeholder="От">
-            <span class="tire">-</span>
+            <span class="tire">—</span>
             <input class="cena_inp" type="text" placeholder="До">
           </div>
 
           <div class="vibor__ceni">
-            <span class="checkbox_txt"><input type="checkbox"> Менее 4 000 ₽</span>
-            <span class="checkbox_txt"><input type="checkbox"> От 4 001 до 10 000 ₽</span>
-            <span class="checkbox_txt"><input type="checkbox"> От 10 001 до 18 000 ₽</span>
-            <span class="checkbox_txt"><input type="checkbox"> От 18 001 до 27 000 ₽</span>
-            <span class="checkbox_txt"><input type="checkbox"> От 27 001 до 40 000 ₽</span>
-            <span class="checkbox_txt"><input type="checkbox"> Более 40 000 ₽</span>
+            <label>
+              <input type="checkbox" name="diff" id="" class="real-checkbox">
+              <span class="custom-checkbox"></span>
+              Менее 4 000 ₽
+            </label>
+            <label>
+              <input type="checkbox" name="diff" id="" class="real-checkbox">
+              <span class="custom-checkbox"></span>
+              От 4 001 до 10 000 ₽
+            </label>
+            <label>
+              <input type="checkbox" name="diff" id="" class="real-checkbox">
+              <span class="custom-checkbox"></span>
+              От 10 001 до 18 000 ₽
+            </label>
+            <label>
+              <input type="checkbox" name="diff" id="" class="real-checkbox">
+              <span class="custom-checkbox"></span>
+              От 18 001 до 27 000 ₽
+            </label>
+            <label>
+              <input type="checkbox" name="diff" id="" class="real-checkbox">
+              <span class="custom-checkbox"></span>
+              От 27 001 до 40 000 ₽
+            </label>
+            <label>
+              <input type="checkbox" name="diff" id="" class="real-checkbox">
+              <span class="custom-checkbox"></span>
+              Более 40 000 ₽
+            </label>
           </div>
         </div>
       </div>
 
       <div class="dropdown">
         <div class="dropdown__header">
-          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          <img class="dropdown__header-img" src="img/images/dropdown.svg" alt="">
           Производитель
         </div>
 
         <div class="dropdown__body">
           <div class="search_creator">
             <input type="text" class="search_creator_txt" placeholder="Поиск">
-            <button class="search_creator_btn"><img src="/img/search.png" alt=""></button>
+            <button class="search_creator_btn"><img src="img/images/search.svg" alt=""></button>
           </div>
 
           <div class="vibor__creator">
-            <span class="checkbox_txt"><input type="checkbox"> Samsung</span>
-            <span class="checkbox_txt"><input type="checkbox"> LG</span>
-            <span class="checkbox_txt"><input type="checkbox"> Xiaomi</span>
-            <span class="checkbox_txt"><input type="checkbox"> TCL</span>
-            <span class="checkbox_txt"><input type="checkbox"> Philips</span>
-            <span class="checkbox_txt"><input type="checkbox"> Sony</span>
-            <span class="checkbox_txt"><input type="checkbox"> BBQ</span>
+            <label>
+              <input type="checkbox" name="diff" id="" class="real-checkbox">
+              <span class="custom-checkbox"></span>
+              Samsung
+            </label>
+            <label>
+              <input type="checkbox" name="diff" id="" class="real-checkbox">
+              <span class="custom-checkbox"></span>
+              LG
+            </label>
+            <label>
+              <input type="checkbox" name="diff" id="" class="real-checkbox">
+              <span class="custom-checkbox"></span>
+              Xiaomi
+            </label>
+            <label>
+              <input type="checkbox" name="diff" id="" class="real-checkbox">
+              <span class="custom-checkbox"></span>
+              TCL
+            </label>
+            <label>
+              <input type="checkbox" name="diff" id="" class="real-checkbox">
+              <span class="custom-checkbox"></span>
+              Philips
+            </label>
+            <label>
+              <input type="checkbox" name="diff" id="" class="real-checkbox">
+              <span class="custom-checkbox"></span>
+              Sony
+            </label>
             <span id="dots"></span>
             <span id="more">
-              <span class="checkbox_txt one"><input type="checkbox"> Samsung</span>
-              <span class="checkbox_txt"><input type="checkbox"> LG</span>
-              <span class="checkbox_txt"><input type="checkbox"> Xiaomi</span>
-              <span class="checkbox_txt"><input type="checkbox"> TCL</span>
-              <span class="checkbox_txt"><input type="checkbox"> Philips</span>
-              <span class="checkbox_txt"><input type="checkbox"> Sony</span>
-              <span class="checkbox_txt"><input type="checkbox"> BBQ</span>
+              <label>
+                <input type="checkbox" name="diff" id="" class="real-checkbox">
+                <span class="custom-checkbox"></span>
+                Ilusha
+              </label>
+              <label>
+                <input type="checkbox" name="diff" id="" class="real-checkbox">
+                <span class="custom-checkbox"></span>
+                Lg
+              </label>
+              <label>
+                <input type="checkbox" name="diff" id="" class="real-checkbox">
+                <span class="custom-checkbox"></span>
+                Xiomi
+              </label>
+              <label>
+                <input type="checkbox" name="diff" id="" class="real-checkbox">
+                <span class="custom-checkbox"></span>
+                TCL
+              </label>
+              <label>
+                <input type="checkbox" name="diff" id="" class="real-checkbox">
+                <span class="custom-checkbox"></span>
+                Ilusha
+              </label>
+              <label>
+                <input type="checkbox" name="diff" id="" class="real-checkbox">
+                <span class="custom-checkbox"></span>
+                Ilusha
+              </label>
             </span>
           </div>
           <button onclick="readmore()" id="readmore_btn">Показать ещё</button>
@@ -145,117 +212,213 @@
 
       <div class="dropdown">
         <div class="dropdown__header">
-          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          <img class="dropdown__header-img" src="img/images/dropdown.svg" alt="">
           Год релиза
         </div>
         <div class="dropdown__body">
 
-          <span class="checkbox_txt"><input type="checkbox" checked> 2020</span>
-          <span class="checkbox_txt"><input type="checkbox"> 2021</span>
-          <span class="checkbox_txt"><input type="checkbox"> 2022</span>
-          <span class="checkbox_txt"><input type="checkbox"> 2023</span>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            2020
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            2021
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            2022
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            2023
+          </label>
 
         </div>
       </div>
 
       <div class="dropdown">
         <div class="dropdown__header">
-          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          <img class="dropdown__header-img" src="img/images/dropdown.svg" alt="">
           Объем встроенной памяти
         </div>
         <div class="dropdown__body">
 
-          <span class="checkbox_txt"><input type="checkbox" checked> 2гб</span>
-          <span class="checkbox_txt"><input type="checkbox"> 3гб</span>
-          <span class="checkbox_txt"><input type="checkbox"> 4гб</span>
-          <span class="checkbox_txt"><input type="checkbox"> 6гб</span>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            2гб with ilusha
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            4гб
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            6гб
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            8гб
+          </label>
 
         </div>
       </div>
 
       <div class="dropdown">
         <div class="dropdown__header">
-          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          <img class="dropdown__header-img" src="img/images/dropdown.svg" alt="">
           NFC
         </div>
         <div class="dropdown__body">
 
-          <span class="checkbox_txt"><input type="checkbox" checked> Да</span>
-          <span class="checkbox_txt"><input type="checkbox"> Нет</span>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            Да
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            Нет
+          </label>
         </div>
       </div>
 
       <div class="dropdown">
         <div class="dropdown__header">
-          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          <img class="dropdown__header-img" src="img/images/dropdown.svg" alt="">
           Емкость аккумулятора
         </div>
         <div class="dropdown__body">
 
-          <span class="checkbox_txt"><input type="checkbox" checked> 3100mAh</span>
-          <span class="checkbox_txt"><input type="checkbox"> 4100mAh</span>
-          <span class="checkbox_txt"><input type="checkbox"> 5000mAh</span>
-          <span class="checkbox_txt"><input type="checkbox"> 5300mAh</span>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            6500mAh
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            5100mAh
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            4900mAh
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            7000mAh
+          </label>
         </div>
       </div>
 
       <div class="dropdown">
         <div class="dropdown__header">
-          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          <img class="dropdown__header-img" src="img/images/dropdown.svg" alt="">
           Операционная система
         </div>
         <div class="dropdown__body">
 
-          <span class="checkbox_txt"><input type="checkbox" checked> IOS</span>
-          <span class="checkbox_txt"><input type="checkbox"> Android</span>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            Ios with the best ilusha
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            Android
+          </label>
         </div>
       </div>
 
       <div class="dropdown">
         <div class="dropdown__header">
-          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          <img class="dropdown__header-img" src="img/images/dropdown.svg" alt="">
           Диагональ экрана
         </div>
         <div class="dropdown__body">
 
-          <span class="checkbox_txt"><input type="checkbox" checked> 5,1"</span>
-          <span class="checkbox_txt"><input type="checkbox"> 6,1"</span>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            5,6"
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            6,1"
+          </label>
         </div>
       </div>
 
       <div class="dropdown">
         <div class="dropdown__header">
-          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          <img class="dropdown__header-img" src="img/images/dropdown.svg" alt="">
           Модель
         </div>
         <div class="dropdown__body">
-
-          <span class="checkbox_txt"><input type="checkbox" checked> Какой-то андроид</span>
-          <span class="checkbox_txt"><input type="checkbox"> Какой-то айфон</span>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            androin 2 turbo ilusha i love u
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            iphone 10 ilusha top
+          </label>
         </div>
       </div>
 
       <div class="dropdown">
         <div class="dropdown__header">
-          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          <img class="dropdown__header-img" src="img/images/dropdown.svg" alt="">
           Поддержка сетей 5G
         </div>
         <div class="dropdown__body">
 
-          <span class="checkbox_txt"><input type="checkbox" checked> Да</span>
-          <span class="checkbox_txt"><input type="checkbox"> Нет</span>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            Да
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            Нет
+          </label>
         </div>
       </div>
 
       <div class="dropdown">
         <div class="dropdown__header">
-          <img class="dropdown__header-img" src="/img/dropdown.png" alt="">
+          <img class="dropdown__header-img" src="img/images/dropdown.svg" alt="">
           Количество ядер
         </div>
         <div class="dropdown__body">
 
-          <span class="checkbox_txt"><input type="checkbox" checked> 2</span>
-          <span class="checkbox_txt"><input type="checkbox"> 4</span>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            2 ilushi
+          </label>
+          <label>
+            <input type="checkbox" name="diff" id="" class="real-checkbox">
+            <span class="custom-checkbox"></span>
+            4 ilushi
+          </label>
+
         </div>
       </div>
 
@@ -263,12 +426,25 @@
       <button class="reset__filter">Сбросить фильтры</button>
     </div>
     <div class="content__tovar">
+      <div class="sortirovka_tovarov">
+        <div class="sortirovka_spisok">
+          <select id="selectID">
+            <option value=”GR”>Сначала популярные</option>
+            <option value=”YE”>Сначала дешёвые</option>
+            <option value=”BL”>Часто обозреваемые</option>
+          </select>
+        </div>
+        <div class="vid_sort">
+          <button class="poloski__sort__btn"><img src="img/images/diraction_1.svg" alt=""></button>
+          <button class="cubiki__sort__btn"><img src="img/images/diraction_2.svg" alt=""></button>
+        </div>
+      </div>
       <div class="products-container" id="products">
 
       </div>
       <button id="more_tovar_btn" onclick="moretovar()">Показать ещё</button>
       <div class="num_str">
-        <button><img src="/img/right_str.png" alt=""></button>
+        <button><img src="img/images/left__arrow.svg" alt=""></button>
         <span class="num_str_active">1</span>
         <span>2</span>
         <span>3</span>
@@ -276,7 +452,7 @@
         <span class="skritie__adaptiv">5</span>
         <span>...</span>
         <span>10</span>
-        <button><img src="/img/left_str.png" alt=""></button>
+        <button><img src="img/images/right__arrow.svg" alt=""></button>
       </div>
     </div>
   </div>
@@ -433,7 +609,6 @@
     }
   </script>
   <script>
-    let current_rotation_1 = 180;
     document.querySelectorAll('.dropdown__header').forEach((el) => {
       el.addEventListener('click', () => {
         let content = el.nextElementSibling;

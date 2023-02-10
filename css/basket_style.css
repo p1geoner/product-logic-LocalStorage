@@ -193,6 +193,7 @@ main {
   display: flex;
 
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .total {
@@ -202,6 +203,7 @@ main {
 
 .blockCard {
   display: flex;
+  justify-content: space-between;
 }
 
 .cardName {

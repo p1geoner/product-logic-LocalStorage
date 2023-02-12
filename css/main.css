@@ -504,6 +504,9 @@ a {
   transition: transform 0.5s ease-in;
 }
 /* Footer */
+.footer {
+  margin-top: 80px;
+}
 .next {
   float: right;
   margin-top: 180px;
@@ -513,8 +516,6 @@ a {
   font-size: 1rem;
   width: 30px;
   height: 30px;
-}
-label {
 }
 @media screen and (max-width: 1600px) {
   .nav__gps {
@@ -625,10 +626,6 @@ label {
     max-width: 835px;
     width: 100%;
   }
-  .slider-container {
-  }
-  .slider__right-arrow {
-  }
   .main.flex {
     max-width: 835px;
     margin: 0 auto;
@@ -736,9 +733,6 @@ label {
     max-width: 100%;
     flex-direction: column;
   }
-  .main.flex {
-  }
-
   .main__photo {
     max-height: 300px;
     max-width: 100%;
@@ -975,5 +969,12 @@ label {
   }
   .now {
     margin-bottom: 0;
+  }
+  .brands__container {
+    grid-template-columns: repeat(2, 130px);
+  }
+  .brands__container img {
+    width: 100px;
+    height: 70px;
   }
 }

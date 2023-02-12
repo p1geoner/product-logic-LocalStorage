@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+    </header>
+    <div class="container">
+        <div class="main flex">
+            <div class="main__photo">
+                <div class="image fade">
+                    <img src="img/images/photo1.png">
+                </div>
+                <div class="image fade">
+                    <img src=" img/images/photo2.png">
+                </div>
+                <div class="image fade">
+                    <img src="img/images/photo3.png">
+                </div>
+                <div class="image fade">
+                    <img src="img/images/photo4.png">
+                </div>
+                <div class="image fade">
+                    <img src="img/images/photo5.png">
+                </div>
+                <div class="controls">
+                    <label for="r5" class="arrow-left">
+                        <a id="prev" onclick="show_slide(-1)"></a>
+                    </label>
+                    <label for="r2" class="arrow-right">
+                        <a id="next" onclick="show_slide(1)"></a>
+                    </label>
+                </div>
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div><!--main__photo-->
+            <div class="item-container" id="item-container">
+            </div>
+        </div><!--main flex-->
+        <h5 class="viewed__title">Популярные товары</h5>
+        <div class="viewed__slider">
+            <ul class="slider-container" id="slider-container">
+            </ul>
+            <label for="r2" class="slider__right-arrow">
+                <a id="next_item" onclick="slider('slider-container')"></a>
+            </label>
+        </div>
+        <h5 class="brands__title">Бренды</h5>
+        <div class="brands">
+            <div class="brands__container">
+                <img src="img/images/card1.png" alt="image" class="img img-brands">
+                <img src="img/images/card2.png" alt="image" class="img img-brands">
+                <img src="img/images/card3.png" alt="image" class="img img-brands">
+                <img src="img/images/card4.png" alt="image" class="img img-brands">
+                <img src="img/images/card5.png" alt="image" class="img img-brands">
+                <img src="img/images/card6.png" alt="image" class="img img-brands">
+                <img src="img/images/card7.png" alt="image" class="img img-brands">
+                <img src="img/images/card8.png" alt="image" class="img img-brands">
+                <img src="img/images/card9.png" alt="image" class="img img-brands">
+                <img src="img/images/card10.png" alt="image" class="img img-brands">
+                <img src="img/images/card11.png" alt="image" class="img img-brands">
+                <img src="img/images/card12.png" alt="image" class="img img-brands">
+            </div>
+        </div><!--Brands-->
+        <div class="now">
+            <h5 class="viewed__title">Успей сейчас</h5>
+            <div class="viewed__slider">
+                <ul class="slider-container" id="slider-container_2">
+                </ul>
+                <label for="r2" class="slider__right-arrow">
+                    <a id="next_item" onclick="slider('slider-container_2')"></a>
+                </label>
+            </div>
+        </div><!--main-->
+    </div>
+    </div><!--Container-->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="logo-div">
+                <a href="index.html" class="logo"><img src="img/images/Logo.svg" alt="#" class="logo__img"></a>
+            </div>
+            <div class="footer__container-flex">
+                <div class="footer__tab">
+                    <div class="footer__tabs_container">
+                        <div class="footer__tabs-header">О Компании <img class="footer__tabs-header-img"
+                                src="img/images/strelka-footer.svg" alt="">
+                        </div>
+                        <div class="footer__tabs-body">
+                            <p>Про ELECTRONICS</p>
+                            <p>Новости</p>
+                            <p>Партнерам</p>
+                            <p>Вакансии</p>
+                            <p>Политика конфиденциальности</p>
+                            <p>Персональные данные</p>
+                            <p>Правила продаж</p>
+                            <p>Сервисные центры</p>
+                        </div>
+                        <div class="footer__tabs-header">Покупателям <img class="footer__tabs-header-img"
+                                src="img/images/strelka-footer.svg" alt="">
+                        </div>
+                        <div class="footer__tabs-body">
+                            <p>Как оформить заказ</p>
+                            <p>Способы оплаты</p>
+                            <p>Кредиты</p>
+                            <p>Доставка</p>
+                            <p>Статус заказа</p>
+                            <p>Обмен, возврат, гарантия</p>
+                            <p>Проверка статуса ремонта</p>
+                            <p>Юридическим лицам</p>
+                            <p>Проверка счета</p>
+                            <p>Корпоративные отделы</p>
+                            <p>Подарочные карты</p>
+                            <p>Бонусная программа</p>
+                            <p>Помощь </p>
+                            <p>Обратная связь</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__tabs">
+                    <div class="footer__tabs-header">
+                        <div class="footer__tabs-header-item">
+                            <p class="footer__tabs-header-text">
+                                О Компании
+                            </p>
+                        </div>
+                        <div class="footer__tabs-header-item">
+                            <p class="footer__tabs-header-text">
+                                Покупателям
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer__tabs-body">
+                        <div class="footer__tabs-body-item">
+                            <div class="footer__tabs-body-item">
+                                <p>Про ELECTRONICS</p>
+                                <p>Новости</p>
+                                <p>Партнерам</p>
+                                <p>Вакансии</p>
+                                <p>Политика конфиденциальности</p>
+                                <p>Персональные данные</p>
+                                <p>Правила продаж</p>
+                                <p>Сервисные центры</p>
+                            </div>
+                        </div>
+                        <div class="footer__tabs-body-item flex">
+                            <div class="footer__tabs-body-item-container_1">
+                                <p>Как оформить заказ</p>
+                                <p>Способы оплаты</p>
+                                <p>Кредиты</p>
+                                <p>Доставка</p>
+                                <p>Статус заказа</p>
+                                <p>Обмен, возврат, гарантия</p>
+                                <p>Проверка статуса ремонта</p>
+                            </div>
+                            <div class="footer__tabs-body-item-container_2">
+                                <p>Юридическим лицам</p>
+                                <p>Проверка счета</p>
+                                <p>Корпоративные отделы</p>
+                                <p>Подарочные карты</p>
+                                <p>Бонусная программа</p>
+                                <p>Помощь </p>
+                                <p>Обратная связь</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__container-social">
+                    <div class="footer__container-social-text">Мы в соцсетях</div>
+                    <div class="footer__container-social-btns">
+                        <div class="footer__container-social-btn"><a href=""><img src="img/images/facebook.svg"
+                                    alt="#"></a>
+                        </div>
+                        <div class="footer__container-social-btn"><a href=""><img src="img/images/twitter.svg"
+                                    alt="#"></a>
+                        </div>
+                        <div class="footer__container-social-btn"><a href=""><img class="img-width-22px"
+                                    src="img/images/inst.svg" alt="#"></a></div>
+                        <div class="footer__container-social-btn"><a href=""><img src="img/images/vk.svg" alt="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__container-2">
+            <div class="footer__container-2-copy">
+                <p>Copyright 2022</p>
+            </div>
+            <div class="footer__container-2-text">
+                <a href="">Политика конфиденциальности</a><a href="">Публичная оферта</a><a href="">Карта сайта</a>
+            </div>
+        </div>
+
+    </footer>
+</body>
+<script src="js/localstorage.js"></script>
+<script src="js/localstorage_compare.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/header.js"></script>
+<script src="js/random__product.js"></script>
+<script src="js/main.js"></script>
+<script src="js/slider_items.js"></script>
+<script src="js/tabs.js"></script>
+
+</html>

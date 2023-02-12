@@ -1,8 +1,8 @@
-class products{
+class compare{
   constructor(){
     this.classNameActive='_active';
     this.labelAdd=`<img src="img/images/basket.svg" alt="#">`;
-    this.labelRemove='Удалить из корзины';
+    this.labelRemove='Удалить';
     this.labelAddCompare=`<img src="img/images/heart.svg" alt="#">`
     this.labelRemoveCompare=`<img src="img/images/heartred.svg" alt="#">`
   }
@@ -25,11 +25,11 @@ class products{
     }else{
       element.innerHTML = this.labelAddCompare;
     }
+    headerPage.render(products.length);
   }
 
     render(){
       const productsStore = localStorage.getProducts();
-      
       let HtmlCatalog ='';
       CATALOG.forEach(({id, name, price, img, reviews, grade})=>{
         let activeClass='';
@@ -47,12 +47,13 @@ class products{
         }else{
           activeHeart = this.labelRemoveCompare;
         }
-
+        const Compare_items = localStorageCompare.getProducts();
+        if(Compare_items.indexOf(id)!==-1){
         HtmlCatalog +=`
           
-        <li class="product__item" id="diraction">
-        <div class="item__image" id="diraction" style="background-image: url(${img});"></div>
-        <div class="container_flex-gap" id="diraction">
+        <li class="product__item">
+        <div class="item__image" style="background-image: url(${img});"></div>
+        <div class="container_flex-gap">
           <a href="#">${name}</a>
           <div class="item__star">
             <div class="star"><img src="img/images/Star.svg" alt="#"></div>
@@ -64,21 +65,21 @@ class products{
           </div>
         </div>
         <div class="item-form">
-          <div class="item-form__btn${activeClass}" onclick="productsPage.hamdleSetLocationStorage(this,'${id}')">
+          <div class="item-form__btn${activeClass}" onclick="ComparePage.hamdleSetLocationStorage(this,'${id}')">
             ${activeText}</div>
-          <div class="item-form__heart" onclick="productsPage.hamdleSetLocationStorageCompare(this,'${id}')" >${activeHeart}</div>
-          <a class="item-form__stat" href="compare.html"><img src="img/images/Compare.svg" alt="#"></a>
+          <div class="item-form__heart" onclick="ComparePage.hamdleSetLocationStorageCompare(this,'${id}')" >${activeHeart}</div>
+          <div class="item-form__stat"><img src="img/images/Compare.svg" alt="#"></div>
         </div>
       </li>
         `;
-      })
+    }})
       const Html =`
-        <ul class="products-container">
+        <ul class="compare-flex">
           ${HtmlCatalog}
         </ul>
       `;
-      ROOT_PRODUCTS.innerHTML = Html;
+      ROOT_SHOPPING.innerHTML = Html;
     }
 }
-const productsPage = new products();
-productsPage.render();
+const ComparePage = new compare();
+ComparePage.render();

@@ -190,6 +190,7 @@ footer {
     position: inherit;
     width: 100%;
     justify-content: space-between;
+    cursor: pointer;
   }
   .footer__container-social-text {
     padding-top: 25px;
@@ -229,6 +230,12 @@ footer {
   }
   .logo-div {
     padding-bottom: 30px;
+  }
+  .footer__tabs-body p {
+    cursor: pointer;
+  }
+  .footer__tabs-body p:hover {
+    color: white;
   }
 
   /* /footer */

@@ -2,8 +2,10 @@ class Header{
   headerOpenBascet(){
     basketPage.render();
   }
-
-  render(count){
+  headerOpenCompare(){
+    
+  }
+  render(count,countCompare){
     const Html = `
       <div class="header_width-1140px">
         <nav class="header__navigation">
@@ -24,16 +26,19 @@ class Header{
       <div class="header_width-1140px">
         <div class="header__bottom">
           <div class="logo__container">
-            <a href="index.html" class="logo"><img src="img/images/Logo.svg" alt="#" class="logo__img"></a>
+            <a href="main.html" class="logo"><img src="img/images/Logo.svg" alt="#" class="logo__img"></a>
           </div>
           <div class="geo2 geo">
             <img src="img/images/strelkageo.svg" alt="#">
             <span id="tow">Город</span>
           </div>
-          <div class="header__select">
-            <select name="" id="" class="form__select">
-              <option value="1">Каталог</option>
-              <option value="2">Телефоны</option>
+          <div class="header__select" >
+            <select class="form__select" onchange="if (this.value) window.location.href = this.value">
+              <option value="" disabled selected style='display:none;'>Каталог</option>
+              <option value="index.html">Каталог</option>
+              <option value="main.html">Главная</option>
+              <option value="basket.html">Корзина</option>
+              <option value="compare.html">Сравнение</option>
             </select>
           </div>
           <div class="header__search">
@@ -43,7 +48,7 @@ class Header{
             </span>
           </div>
           <ul class="menu">
-            <li><a href="" class="header__btns_bottom"><img src="img/images/Compare.svg" alt="#"><span>Сравнить</span>
+            <li><a href="compare.html" class="header__btns_bottom"><img src="img/images/Compare.svg" alt=""><span>Сравнить</span>
               </a></li>
             <li><a href="basket.html" class="header__btns_bottom" onclick="headerPage.headerOpenBascet();"><img src="img/images/Market.svg" alt="#"><span>${count} Корзина</span></a>
             </li>
@@ -54,7 +59,7 @@ class Header{
       </div>
     
     `;
-    ROOT_HEADER.innerHTML= Html; 
+    document.getElementById('header').innerHTML= Html; 
   }
 }
 const headerPage =new Header();

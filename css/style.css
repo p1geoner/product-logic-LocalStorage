@@ -86,20 +86,20 @@ select {
 .poloski__sort__btn {
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 .poloski__sort__btn:hover {
   border-radius: 50px;
-  background-color: #c5c5c7;
+  background-color: #d9d9d9;
 }
 .cubiki__sort__btn {
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 .cubiki__sort__btn:hover {
   border-radius: 50px;
   background-color: #c5c5c7;
-}
-.vid_sort {
 }
 .way {
   margin: 0 auto;
@@ -322,6 +322,7 @@ select {
   background-color: #ffffff;
   margin-right: 6px;
   margin-left: 10px;
+  cursor: pointer;
 }
 .custom-checkbox::before {
   content: "";
@@ -514,10 +515,11 @@ select {
   background-color: #fff;
   border-radius: 6px;
   border: 1px solid #8e8e93;
+  cursor: pointer;
 }
 #more_tovar_btn:hover {
   background-color: #1e2022;
-  border: none;
+  border: 1px solid #1e2022;
   color: #fff;
 }
 #dots_tovar {
@@ -528,6 +530,15 @@ select {
   display: none;
   flex-direction: column;
 }
+.category_name {
+  max-width: 1120px;
+  margin-top: 40px;
+  margin: 0 auto;
+}
+.category_name h1 {
+  margin: 0;
+  margin-top: 60px;
+}
 
 .num_str {
   font-family: "Roboto";
@@ -537,13 +548,18 @@ select {
   margin-left: 37px;
   margin-top: 20px;
 }
-.num_str span {
-  padding-left: 42px;
-  padding: 15px;
+.num_str .num_str__btn,
+.num_str_active {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
 }
-.num_str span:hover {
+.num_str .num_str__btn:hover {
   border: 1px solid #404040;
   border-radius: 4px;
+}
+.num_str__btn._none:hover {
+  border: 1px solid #ffffff;
 }
 .num_str_active {
   border: 1px solid #404040;
@@ -559,7 +575,16 @@ select {
   border-radius: 50px;
   border: 1px solid black;
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 1000px) {
+  .way,
+  .category_name {
+    margin-left: 20px;
+  }
+  .content__tovar {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
   .block__sravnen {
     display: none;
   }
@@ -578,14 +603,12 @@ select {
   }
   .content__tovar {
     max-width: 300px;
-    margin-left: 10px;
   }
   #more_tovar_btn {
     width: 300px;
-    margin-left: -15px;
   }
   .num_str {
-    margin-left: -25px;
+    margin-left: -4px;
   }
   .skritie__adaptiv {
     display: none;
@@ -595,6 +618,7 @@ select {
   }
   .filtres {
     margin: o auto;
+    margin-left: 20px;
   }
   .products-container {
     justify-items: center;

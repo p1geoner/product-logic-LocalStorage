@@ -95,5 +95,29 @@ const CATALOG =[
     reviews:355,
     grade:'4,1',
   },
+  {
+    id:'el13',
+    name: '6.52" Смартфон Xiaomi Redmi A1+ 32 ГБ голубой',
+    img: 'img/catalog/el13.jpg',
+    price: 5399,
+    reviews:283,
+    grade:'4,8',
+  },
+  {
+    id:'el14',
+    name: 'Процессор Intel Core i9-13900KF BOX',
+    img: 'img/catalog/el15.jpg',
+    price: 56799,
+    reviews:22,
+    grade:'5,0',
+  },
+  {
+    id:'el15',
+    name: '2000 ГБ SSD M.2 накопитель Samsung 980 PRO',
+    img: 'img/catalog/el14.jpg',
+    price: 22899,
+    reviews:32,
+    grade:'5,0',
+  },
   
 ]

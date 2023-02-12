@@ -157,16 +157,7 @@ main {
 .User-Placement__text {
   padding-top: 20px;
 }
-.Main-prod__flex {
-  display: flex;
-  flex-direction: row;
-}
-.Main-prod__flex {
-  gap: 50px;
-}
-.Main-prod__container {
-  justify-content: space-between;
-}
+
 .myCart {
   margin-top: 45px;
   width: 65%;
@@ -304,7 +295,7 @@ button {
 }
 
 .btnAfter::before {
-  content: url("./img/strel.svg");
+  content: url("../img/images/strel.svg");
   position: absolute;
   top: -40%;
   left: -15px;
@@ -317,7 +308,7 @@ button {
 }
 
 .btnAfter.active:before {
-  content: url("./img/strel2.svg");
+  content: url("../img/images/strel2.svg");
   position: absolute;
   top: -40%;
   left: -15px;
@@ -561,7 +552,6 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 4px 24px;
   gap: 10px;
   background: #f05757;
   /* Cherry */
@@ -569,6 +559,11 @@ button {
   border: 1px solid #f05757;
   border-radius: 6px;
   margin-top: 15px;
+  cursor: pointer;
+}
+.big-btn:hover {
+  background: #eb4242;
+  border: 1px solid #eb4242;
 }
 
 .big-btn__button {
@@ -580,12 +575,11 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 4px 24px;
   gap: 10px;
   background: #f05757;
   /* Cherry */
 
-  border: 1px solid #f05757;
+  border: 0px solid #f05757;
   border-radius: 6px;
   color: #fff;
   font-family: "Roboto";
@@ -593,6 +587,18 @@ button {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+  cursor: pointer;
+  width: 224px;
+  height: 40px;
+  padding: 0px;
+}
+.big-btn__button:hover {
+  background: #eb4242;
+  border: 1px solid #eb4242;
+}
+.big-btn__button:active {
+  background-color: #661010;
+  border: 1px solid #661010;
 }
 .Main-prod__price-container_flex {
   display: flex;
@@ -721,6 +727,9 @@ button {
 
   color: #1e2022;
 }
+.total_title:hover {
+  color: #1e2022;
+}
 
 @media (max-width: 1200px) {
   .user-watched__container-item.second {
@@ -728,9 +737,13 @@ button {
   }
   .main,
   .main_width-1140px {
-    /* width: 95%; */
-    /* position: relative; */
     margin: 0 auto;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+  }
+  .iphone__block {
+    min-width: 650px;
   }
   body {
     background-color: white;
@@ -747,6 +760,14 @@ button {
   }
 }
 @media (max-width: 500px) {
+  .iphone__block {
+    min-width: 0px;
+    max-width: 500px;
+    width: 100%;
+  }
+  .blockCard {
+    flex-direction: column;
+  }
   .footer__tabs-header-item img {
     display: block;
     margin-right: 3%;
@@ -770,19 +791,28 @@ button {
     border: 0;
     padding: 0;
   }
-
-  .all {
-    height: 330px;
-    width: 88%;
-
-    border-radius: 8px;
-    margin-bottom: 20px;
+  .rightCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .main_width-1140px {
-    max-width: 500px;
-    display: block;
+  .accordCard__item.active {
+    display: none;
   }
-
+  .total {
+    margin: 0;
+    width: fit-content;
+  }
+  .img {
+    margin-left: 20px;
+  }
+  .Main-prod__price-container {
+    width: fit-content;
+  }
+  .cardPrice {
+    margin: 0;
+  }
   .myCart_title {
     margin-left: 20px;
   }
@@ -803,12 +833,19 @@ button {
     margin-left: 60px;
   }
 
-  .total {
-    margin-left: 130px;
-    margin-bottom: 40px;
-  }
-
   .total_title {
     display: none;
+  }
+  .btnAfter.active::before {
+    content: url("../img/images/strel.svg");
+    position: absolute;
+    top: -40%;
+    left: -15px;
+
+    display: block;
+    height: 10px;
+    width: 10px;
+
+    opacity: 1;
   }
 }

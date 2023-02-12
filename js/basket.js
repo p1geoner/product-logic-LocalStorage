@@ -4,6 +4,7 @@ class Basket{
   render(){
     const productsStore = localStorage.getProducts();
     let HtmlCatalog ='';
+    let sumPrice=0;
     CATALOG.forEach(({id, name, price, img})=>{
       if(productsStore.indexOf(id)!==-1){
         HtmlCatalog+=`
@@ -70,6 +71,7 @@ class Basket{
             </span>
           </div>
         `;
+        sumPrice +=price;
       }
     });
     const html =`
@@ -79,6 +81,17 @@ class Basket{
         </table>
       </div>
     `;
+    const htmlsum=`
+    <p style="margin: 10px 0">
+    Итого
+      <span class="dashed">
+      </span>
+    </p>
+    <span class="amountSum" >
+      ${sumPrice.toLocaleString()}₽
+    </span>
+    `;
+    ROOT_SUM.innerHTML=htmlsum;
     ROOT_SHOPPING.innerHTML=html;
     
   }

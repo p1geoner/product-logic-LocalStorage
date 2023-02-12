@@ -1,4 +1,8 @@
-class products{
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+class random__product{
   constructor(){
     this.classNameActive='_active';
     this.labelAdd=`<img src="img/images/basket.svg" alt="#">`;
@@ -29,9 +33,12 @@ class products{
 
     render(){
       const productsStore = localStorage.getProducts();
-      
+      let randomNumber = getRandomNumber(1, 11);
+      let random_item='';
+      random_item='el'+randomNumber;
       let HtmlCatalog ='';
       CATALOG.forEach(({id, name, price, img, reviews, grade})=>{
+        if(id==random_item){
         let activeClass='';
         let activeText= '';
         if(productsStore.indexOf(id)=== -1){
@@ -64,21 +71,22 @@ class products{
           </div>
         </div>
         <div class="item-form">
-          <div class="item-form__btn${activeClass}" onclick="productsPage.hamdleSetLocationStorage(this,'${id}')">
+          <div class="item-form__btn${activeClass}" onclick="random_product.hamdleSetLocationStorage(this,'${id}')">
             ${activeText}</div>
-          <div class="item-form__heart" onclick="productsPage.hamdleSetLocationStorageCompare(this,'${id}')" >${activeHeart}</div>
+          <div class="item-form__heart" onclick="random_product.hamdleSetLocationStorageCompare(this,'${id}')" >${activeHeart}</div>
           <a class="item-form__stat" href="compare.html"><img src="img/images/Compare.svg" alt="#"></a>
         </div>
       </li>
         `;
-      })
+    }})
       const Html =`
-        <ul class="products-container">
+      
+        
           ${HtmlCatalog}
-        </ul>
+        
       `;
-      ROOT_PRODUCTS.innerHTML = Html;
+      document.getElementById('item-container').innerHTML = Html;
     }
 }
-const productsPage = new products();
-productsPage.render();
+const random_product = new random__product();
+random_product.render();
